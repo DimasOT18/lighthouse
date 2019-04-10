@@ -1,10 +1,14 @@
 #!/usr/bin/env bash
+set -x
 
 # manually install this one report dependency. Avoid installing all deps.
 rm package.json
 npm i details-element-polyfill@2.2.0
 
 mkdir -p dist
+
+git status
+ls
 
 # generate the report and place as dist/index.html
 node -e "
