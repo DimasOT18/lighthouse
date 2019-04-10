@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
-echo "running node......."
+
+# manually install this one report dependency. Avoid installing all deps.
+rm package.json
+npm i details-element-polyfill@2.2.0
+
+# generate the report and place as dist/index.html
 node -e "
    console.log('🕒 Generating report for sample_v2.json...');
    const ReportGenerator = require('./lighthouse-core/report/report-generator');
