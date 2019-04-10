@@ -4,6 +4,8 @@
 rm package.json
 npm i details-element-polyfill@2.2.0
 
+mkdir -p dist
+
 # generate the report and place as dist/index.html
 node -e "
    console.log('🕒 Generating report for sample_v2.json...');
